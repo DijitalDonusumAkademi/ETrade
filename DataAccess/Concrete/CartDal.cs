@@ -25,7 +25,7 @@ namespace DataAccess.Concrete
             {
                 return context.Carts.Include(x => x.CartItems)
                     .ThenInclude(x => x.Product)
-                    .FirstOrDefault(i => i.userId == userId);
+                    .FirstOrDefault(i => i.UserId == userId);
             }
         }
 
